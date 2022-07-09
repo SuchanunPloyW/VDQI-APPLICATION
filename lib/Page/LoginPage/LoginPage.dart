@@ -40,19 +40,19 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        
-          preferredSize: Size.fromHeight(100),
-          child: AppBar(
-            backgroundColor: Colors.blue[900],
-            //title: Text('grrrrr'),
-            automaticallyImplyLeading: false,
-            shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.vertical(
-                    bottom: Radius.circular(75), )),
-          )),
+        appBar: PreferredSize(
+            preferredSize: Size.fromHeight(75),
+            child: AppBar(
+              backgroundColor: Colors.blue[900],
+              //title: Text('grrrrr'),
+              automaticallyImplyLeading: false,
+              shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.vertical(
+                bottom: Radius.circular(75),
+              )),
+            )),
         backgroundColor: Colors.grey[300],
-        body: SafeArea(
+        body: SingleChildScrollView(
           child: Center(
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -74,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               const SizedBox(
-                height: 50,
+                height: 40,
               ),
 
               // email TextField
@@ -92,6 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                       controller: mailController,
                       keyboardType: TextInputType.text,
                       decoration: const InputDecoration(
+                        icon: Icon(Icons.person),
                         border: InputBorder.none,
                         hintText: 'Email',
                       ),
@@ -119,6 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                       keyboardType: TextInputType.text,
                       obscureText: true,
                       decoration: const InputDecoration(
+                        icon: Icon(Icons.lock),
                         border: InputBorder.none,
                         hintText: 'Password',
                       ),
@@ -135,8 +137,8 @@ class _LoginPageState extends State<LoginPage> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       primary: Colors.blue[900],
-                      padding: EdgeInsets.all(3.0),
-                      minimumSize: Size(400, 0)),
+                      padding: EdgeInsets.all(1.0),
+                      minimumSize: Size(300, 0)),
 
                   // ignore: sort_child_properties_last
                   child: const Padding(

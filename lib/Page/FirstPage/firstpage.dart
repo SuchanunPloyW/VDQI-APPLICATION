@@ -78,7 +78,7 @@ class _FirstPageState extends State<FirstPage> {
                       fontFamily: ('IBM Plex Sans Thai')),
                 ),
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.red,
+                    primary: Colors.red[900],
                     padding: const EdgeInsets.all(10.0),
                     minimumSize: const Size(250, 35)),
               ),
